@@ -1,0 +1,293 @@
+@namespace "http://docbook.org/ns/docbook";
+@namespace html "http://www.w3.org/1999/xhtml";
+
+refentry, article {
+	display: block;
+	font-family: 'Lucida Grande', 'Geneva', 'Helvetica', sans-serif;
+	font-size: 80%;
+	margin: 1.5em;
+}
+
+refnamediv, refsynopsisdiv, refsection, section, sect1, sect2, sect3, sect4 {
+	display: block;
+	margin: 1em 0 1.5em 0;
+}
+para {
+	display: block;
+	margin: 0.75em 0 0.75em 0;
+}
+
+methodname, literal, parameter, classname, type, property, varname, function, modifier, constant {
+	font-family: monaco, courier, monospace;
+	font-size: 110%;
+}
+
+methodname, methodname html|a:link, methodname html|a:visited {
+	color: #000;
+}
+constant, constant html|a:link, constant html|a:visited {
+	color: #800;
+	font-weight: bold;
+}
+
+literal, literal html|a:link, literal html|a:visited {
+	color: #080;
+}
+
+property, property html|a:link, property html|a:visited {
+	color: #880;
+}
+
+varname, varname html|a:link, varname html|a:visited {
+	color: #008;
+}
+
+type, classname, type html|a:link, type html|a:visited, classname html|a:link, classname html|a:visited {
+	color: #800;
+}
+
+modifier, modifier html|a:link, modifier html|a:visited {
+	color: #888;
+}
+
+type > classname, property > classname, constant > classname {
+	font-size: 100%;
+}
+
+parameter, parameter html|a:link, parameter html|a:visited {
+	font-style: italic;
+	color: #000;
+}
+
+itemizedlist {
+	display: block;
+	margin-left: 1.5em;
+}
+itemizedlist > listitem {
+	display: list-item;
+	list-style: square outside;
+}
+
+
+/* refnamediv */
+
+refnamediv {
+	margin-top: 0;
+}
+
+refnamediv > refname {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	font-size: 130%;
+}
+
+/* articleinfo */
+
+articleinfo {
+	margin-top: 0;
+}
+
+articleinfo > title {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	font-size: 130%;
+}
+
+articleinfo > author {
+	display: none;
+}
+
+articleinfo > copyright {
+	display: block;
+	font-size: 75%;
+	color: #ccc;
+}
+
+articleinfo > copyright > year:before {
+	content: 'Copyright © ';
+}
+articleinfo > copyright > holder:after {
+	content: '.';
+}
+
+/* refsynopsisdiv */
+
+refsynopsisdiv {
+}
+
+refsynopsisdiv > methodsynopsis {
+	display: block;
+	font-family: monaco, courier, monospace;
+	font-size: 110%;
+	text-indent: -2em;
+	background: #eee;
+	border: solid #ccc 1px;
+	padding: 1em 1em 1em 3em;
+}
+
+refsynopsisdiv > methodsynopsis methodname,
+refsynopsisdiv > methodsynopsis parameter,
+refsynopsisdiv > methodsynopsis type,
+refsynopsisdiv > methodsynopsis classname,
+refsynopsisdiv > methodsynopsis modifier {
+	font-size: 100%;
+}
+
+refsynopsisdiv[role="objc"] > methodsynopsis type:before {
+	color: #000;
+	content: '(';
+}
+refsynopsisdiv[role="objc"] > methodsynopsis type:after {
+	color: #000;
+	content: ')';
+}
+refsynopsisdiv > methodsynopsis parameter {
+	font-style: italic;
+}
+
+/* refsection */
+
+refsection > title {
+	display: block;
+	font-weight: bold;
+	font-size: 110%;
+	margin: 0.75em 0 0.75em 0;
+}
+
+/* sect1, sect2, ... */
+
+article > section > title, sect1 > title {
+	display: block;
+	font-weight: bold;
+	font-size: 110%;
+	margin: 0.75em 0 0.75em 0;
+}
+
+article > section > section > title, sect2 > title {
+	display: block;
+	font-weight: bold;
+	font-size: 100%;
+	margin: 0.75em 0 0.75em 0;
+	color: #666;
+}
+
+/* variablelist */
+
+variablelist > varlistentry, variablelist > varlistentry > term {
+	display: block;
+}
+
+variablelist > varlistentry > listitem {
+	display: block;
+	margin: 0 0 1em 2em;
+}
+
+/* programlisting */
+
+programlisting {
+	background: #eee;
+	border: solid #ccc 1px;
+	padding: 1em;
+	font-family: monaco, courier, monospace;
+	font-size: 110%;
+	display: block;
+	white-space: pre;
+	overflow: auto;
+}
+
+code {
+	font-family: monaco, courier, monospace;
+	font-size: 110%;
+}
+
+code code, programlisting programlisting, code programlisting, programlisting code {
+	font-size: 100%;
+}
+
+code methodname, code literal, code parameter, code classname, code type,
+code property, code varname, code function, code constant {
+	font-size: 100%;
+}
+
+programlisting methodname, programlisting literal, programlisting parameter,
+programlisting classname, programlisting type, programlisting property, 
+programlisting varname, programlisting function, programlisting constant {
+	font-size: 100%;
+}
+
+programlisting lineannotation {
+	color: #666;
+	font-style: italic;
+}
+
+/* example */
+
+example {
+	display: block;
+	background: #eee;
+	border: solid #ccc 1px;
+	overflow: auto;
+}
+
+example > title {
+	display: block;
+	font-weight: bold;
+	padding: 0.25em 1em 0.5em 1em;
+}
+
+example > programlisting {
+	border: none;
+	overflow: visible;
+}
+
+/* note */
+
+note {
+	display: block;
+	background: #cfcfff;
+	padding: 1em;
+	border: solid #668 1px;
+	-webkit-border-radius: 4px;
+}
+note:before {
+	content: 'Note: ';
+	font-weight: bold;
+}
+
+/* HTML (links) */
+
+html|a:link {
+	color: #008;
+}
+html|a:visited {
+	color: #808;
+}
+
+/* Availability */
+
+section[role="availability"] > variablelist {
+	display: table;
+	background-color: #eee;
+	border: solid #ccc 1px;
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.25);
+}
+section[role="availability"] > variablelist > varlistentry {
+	display: table-row;
+}
+section[role="availability"] > variablelist > varlistentry > term {
+	display: table-cell;
+	font-weight: bold;
+	padding: 0.75em;
+}
+section[role="availability"] > variablelist > varlistentry > listitem {
+	display: table-cell;
+	padding: 0 0.75em 0 0.75em;
+}
+
+section[role="availability"] > variablelist para {
+	margin: 0.75em 0 0.75em 0;
+}
+

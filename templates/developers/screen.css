@@ -1,0 +1,23 @@
+body.sect-home #masthead {
+	min-height: 250px;
+}
+
+body.sect-home div.section {
+	float: left;
+	width: 40%;
+	background-color: #445;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#445), to(#112));
+	color: #ddd;
+}
+body.sect-home div.section a:link, body.sect-home div.section a:visited {
+	color: #3f70b9;
+}
+body.sect-home div.section a:hover, body.sect-home div.section a:active {
+	color: #b96d3f;
+}
+
+body.sect-home div.section#eregansu div.inner {
+	background: url('lily80.png') 0 0 no-repeat;
+	min-height: 80px;
+	padding-left: 96px;
+}
